@@ -31,14 +31,18 @@ El objetivo principal es identificar **tendencias en la evolución del catálogo
 - **¿Existen valores nulos o duplicados?**  
   > La columna `num_parts` tiene un **42 % de nulos**. Se eliminaron **153 duplicados** en `set_num`.  
 
-- **¿Hay valores atípicos?**  
+- **¿Hay valores atípicos?**
+  <img width="689" height="139" alt="Captura de pantalla 2025-10-15 200726" src="https://github.com/user-attachments/assets/3c445282-86cd-4a29-93be-2c0995de98bd" />
   > Distribución sesgada: la mayoría de los sets tiene **< 200 piezas**, pero existen outliers con más de **5000 piezas** (ejemplo: *Taj Mahal – 5922 piezas*).  
+
 
 ---
 
 ### 2️⃣ Análisis Temporal
-- **¿Cómo ha evolucionado el número de sets por año?**  
-  > Crecimiento **exponencial desde 1990**, con un máximo en **2014 (732 sets)**.  
+- **¿Cómo ha evolucionado el número de sets por año?**
+  <img width="695" height="425" alt="Captura de pantalla 2025-10-15 195830" src="https://github.com/user-attachments/assets/ad6478dd-ea23-4bf0-96ca-cfb753ec8d7d" />
+  > Crecimiento **exponencial desde 1990**, con un máximo en **2014 (732 sets)**.
+    
 
 - **¿Ha cambiado el tamaño promedio?**  
   > Sí, los sets modernos son **más grandes y complejos** desde el año 2000.  
@@ -49,16 +53,18 @@ El objetivo principal es identificar **tendencias en la evolución del catálogo
 - **¿Qué proporción del catálogo representa?**  
   > Aproximadamente el **5.1 % del total**, siendo la licencia más importante.  
 
-- **¿Cómo evolucionó?**  
+- **¿Cómo evolucionó?**
+  <img width="688" height="340" alt="Captura de pantalla 2025-10-15 200839" src="https://github.com/user-attachments/assets/bf3af4bc-f826-4345-9076-6dcd221456b7" />
   > Desde su debut en **1999**, supera los **600 sets**, consolidándose como la colaboración más exitosa.  
 
 ---
 
 ### 4️⃣ Licenciados vs. No Licenciados
-- **¿Qué porcentaje son licenciados?**  
-  > Solo el **11.1 % del catálogo**; el resto son creaciones originales.  
+- **¿Qué porcentaje son licenciados?**
+  <img width="570" height="593" alt="Captura de pantalla 2025-10-15 200855" src="https://github.com/user-attachments/assets/441593dd-bcae-4013-aeff-55eccd346034" />
+  > Solo el **10 % del catálogo**; el resto son creaciones originales.  
 
-- **¿Cómo creció esa proporción?**  
+- **¿Cómo creció esa proporción?**
   > A partir de **1999** aumentó sostenidamente, impulsando el éxito comercial de LEGO.  
 
 ---
