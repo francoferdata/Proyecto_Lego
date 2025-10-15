@@ -29,7 +29,7 @@ El objetivo principal es identificar **tendencias en la evolución del catálogo
 
 ### 1️⃣ Calidad de Datos
 - **¿Existen valores nulos o duplicados?**  
-  > La columna `num_parts` tiene un **42 % de nulos**. Se eliminaron **153 duplicados** en `set_num`.  
+  > La columna `num_parts` tiene un **42 % de nulos**. Se eliminaron **152 duplicados** en `set_num`.  
 
 - **¿Hay valores atípicos?**
   <img width="689" height="139" alt="Captura de pantalla 2025-10-15 200726" src="https://github.com/user-attachments/assets/3c445282-86cd-4a29-93be-2c0995de98bd" />
@@ -41,7 +41,7 @@ El objetivo principal es identificar **tendencias en la evolución del catálogo
 ### 2️⃣ Análisis Temporal
 - **¿Cómo ha evolucionado el número de sets por año?**
   <img width="695" height="425" alt="Captura de pantalla 2025-10-15 195830" src="https://github.com/user-attachments/assets/ad6478dd-ea23-4bf0-96ca-cfb753ec8d7d" />
-  > Crecimiento **exponencial desde 1990**, con un máximo en **2014 (732 sets)**.
+  > Crecimiento **exponencial desde 1990**, con un máximo en **2014 (715 sets)**.
     
 
 - **¿Ha cambiado el tamaño promedio?**  
