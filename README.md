@@ -1,4 +1,6 @@
 # Análisis del Catálogo Histórico de LEGO
+![star_wars](https://github.com/user-attachments/assets/e5cab331-89c4-47d0-817a-750cfd6e969c)
+
 
 ## Introducción
 Este proyecto presenta un **análisis exploratorio de datos (EDA)** sobre un dataset histórico de sets de LEGO.  
