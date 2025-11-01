@@ -33,10 +33,7 @@ El notebook de Jupyter (`proyecto-lego.ipynb`) sigue una estructura lógica y pr
 
 **Fusión y Análisis de Temáticas:**  
    Se realizó un **join (`pd.merge`)** entre los sets y sus temas (`parent_themes.csv`) para identificar las temáticas más prolíficas (ej. "Star Wars", "Technic").
-
-**Análisis de Complejidad (Media vs. Mediana):**  
-   Se comparó la media y la mediana del número de piezas por año para detectar patrones de segmentación de producto.
-
+   
 ---
 
 ## Hallazgos Clave
