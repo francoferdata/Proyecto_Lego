@@ -1,87 +1,67 @@
-# Análisis del Catálogo Histórico de LEGO
-![star_wars](https://github.com/user-attachments/assets/e5cab331-89c4-47d0-817a-750cfd6e969c)
+# Análisis Exploratorio de la Historia de LEGO (EDA)
 
+Este proyecto realiza un Análisis Exploratorio de Datos (EDA) sobre el catálogo histórico de sets de LEGO, utilizando datos públicos de Rebrickable.
 
-## Introducción
-Este proyecto presenta un **análisis exploratorio de datos (EDA)** sobre un dataset histórico de sets de LEGO.  
-El objetivo principal es identificar **tendencias en la evolución del catálogo**, con foco en el impacto de las **temáticas licenciadas** como *Star Wars*.  
+El objetivo principal es entender cómo ha evolucionado LEGO como marca y producto, respondiendo a preguntas como:
 
-### Datasets utilizados
-- **lego_sets.csv** → Información de cada set (número, nombre, año, piezas, temática).  
-- **parent_themes.csv** → Describe las temáticas principales e indica si son licenciadas.  
+¿Cómo ha crecido el catálogo de sets a lo largo del tiempo?
+¿Qué temas han sido más populares y persistentes?
+¿Los sets se han vuelto más complejos con el tiempo?
+
 
 ---
 
-## Stack
-- **Lenguaje:** Python  
-- **Librerías:** Pandas, Matplotlib, Seaborn  
-- **Entorno:** Jupyter Notebook  
+## Stack Tecnológico
+
+* **Python**
+* **Pandas:** Para la carga, limpieza, transformación y unión de datos (`pd.merge`).
+
+ * **NumPy:** Para cálculos estadísticos y métricas descriptivas.
+ 
+* **Matplotlib:** Para la visualización de tendencias y distribuciones.
+---
+
+## Flujo del Análisis
+
+El notebook de Jupyter (`proyecto-lego.ipynb`) sigue una estructura lógica y progresiva:
+
+**Carga y Limpieza de Datos:**  
+   Se cargaron los archivos `lego_sets.csv` y `parent_themes.csv`. Se revisaron valores nulos (42% en `num_parts`), se eliminaron duplicados (152) y se trataron datos atípicos (sets con 0 piezas).
+
+**Análisis Temporal del Catálogo:**  
+   Se analizó la variable `year` para observar el crecimiento anual en cantidad de sets y la complejidad promedio (media de `num_parts`).
+
+**Fusión y Análisis de Temáticas:**  
+   Se realizó un **join (`pd.merge`)** entre los sets y sus temas (`parent_themes.csv`) para identificar las temáticas más prolíficas (ej. "Star Wars", "Technic").
+
+**Análisis de Complejidad (Media vs. Mediana):**  
+   Se comparó la media y la mediana del número de piezas por año para detectar patrones de segmentación de producto.
 
 ---
 
-## Fases del Análisis
-1. **Calidad y Limpieza de Datos** → Detección y manejo de nulos, duplicados y outliers.  
-2. **Análisis Temporal** → Evolución del número y tamaño de sets por año.  
-3. **Temática Star Wars** → Estudio de su representatividad y evolución histórica.  
-4. **Sets Licenciados vs. No Licenciados** → Comparación de impacto en el catálogo.  
+## Hallazgos Clave
 
----
+**Crecimiento Exponencial del Catálogo:**  
+El análisis de la producción anual de sets muestra que LEGO pasó de ser un fabricante de nicho a un gigante global. El crecimiento es especialmente dramático desde mediados de la década de 1990, alcanzando su punto máximo en 2014.
 
-## Preguntas y Hallazgos Clave
+<img width="503" height="301" alt="Captura de pantalla 2025-11-01 204821" src="https://github.com/user-attachments/assets/f0f92b64-8907-46d5-b1e7-365e355494d7" />
 
-### Calidad de Datos
-- **¿Existen valores nulos o duplicados?**  
-  > La columna `num_parts` tiene un **42 % de nulos**. Se eliminaron **152 duplicados** en `set_num`.
+
+
+
+**Los Sets se han Vuelto Más Complejos:**  
+   Junto con el aumento en la *cantidad* de sets, también ha aumentado su *complejidad*. El número promedio de piezas por set ha mostrado una clara tendencia al alza, especialmente desde el año 2000, indicando que LEGO está produciendo sets más grandes y detallados.
+
+<img width="504" height="245" alt="Captura de pantalla 2025-11-01 204931" src="https://github.com/user-attachments/assets/e4dd1510-7324-44a5-a209-753f27d0b587" />
+
+
   
 
-- **¿Hay valores atípicos?**
-  
-  <img width="689" height="139" alt="Captura de pantalla 2025-10-15 200726" src="https://github.com/user-attachments/assets/3c445282-86cd-4a29-93be-2c0995de98bd"/>
+**Star Wars marcó un Punto de Inflexión (1999):**  
+   El análisis de temáticas individuales revela que "Star Wars" es una de las categorías más importantes. Su lanzamiento en 1999 no solo creó una línea de productos masiva y duradera, sino que su cronología coincide perfectamente con el inicio del crecimiento exponencial tanto en el volumen como en la complejidad de los sets de LEGO.
 
-  > Distribución sesgada: la mayoría de los sets tiene **< 200 piezas**, pero existen outliers con más de **5000 piezas** (ejemplo: *Taj Mahal – 5922 piezas*).  
-
-
----
-
-### Análisis Temporal
-- **¿Cómo ha evolucionado el número de sets por año?**
-  
-  <img width="695" height="425" alt="Captura de pantalla 2025-10-15 195830" src="https://github.com/user-attachments/assets/ad6478dd-ea23-4bf0-96ca-cfb753ec8d7d" />
-  
-  > Crecimiento **exponencial desde 1990**, con un máximo en **2014 (715 sets)**.
-    
-
-- **¿Ha cambiado el tamaño promedio?**  
-  > Sí, los sets modernos son **más grandes y complejos** desde el año 2000.  
-
----
-
-### Star Wars
-- **¿Qué proporción del catálogo representa?**  
-  > Aproximadamente el **5.1 % del total**, siendo la licencia más importante.  
+   
+<img width="502" height="252" alt="Captura de pantalla 2025-11-01 204949" src="https://github.com/user-attachments/assets/31417a41-9025-4090-97fa-8f5aed07234d" />
 
 
-- **¿Cómo evolucionó?**
 
-  <img width="688" height="340" alt="Captura de pantalla 2025-10-15 200839" src="https://github.com/user-attachments/assets/bf3af4bc-f826-4345-9076-6dcd221456b7" />
-  
-   >Desde su debut en **1999**, supera los **600 sets**, consolidándose como la colaboración más exitosa.  
-
----
-
-### Licenciados vs. No Licenciados
-- **¿Qué porcentaje son licenciados?**
-  
- <img width="559" height="580" alt="image" src="https://github.com/user-attachments/assets/c846f22d-9769-4698-ba47-68a057255048" />
-
-  > Solo el **11% del catálogo**; el resto son creaciones originales.
-
-
-- **¿Cómo creció esa proporción?**
-  > A partir de **1999** aumentó sostenidamente, impulsando el éxito comercial de LEGO.  
-
----
-
-## Conclusión
-La introducción de **licencias** (especialmente *Star Wars*) en **1999** fue un **punto de inflexión** que cambió el rumbo de LEGO.  
-Aunque los sets originales siguen dominando, los licenciados aportaron **complejidad, variedad y crecimiento sostenido**
